@@ -1,0 +1,578 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000324;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #ffffff !important;
+  font: normal normal normal 20px/26px Dosis, Arial, sans-serif;
+}
+
+.navbar-brand img {
+  height: 75px;
+  object-fit: contain;
+}
+
+.navbar-toggler {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+  background-image: url(/assets/Logo.png);
+}
+
+/* Mobile adjustments */
+@media (max-width: 992px) {
+  .navbar-brand {
+    display: none;
+  }
+
+  .collapse.navbar-collapse {
+    background-color: #000324;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav.flex-column a.nav-link {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    display: block;
+  }
+}
+
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(350px, 40vw, 738px);
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(280px, 50%, 945px);
+  padding: clamp(15px, 2vw, 25px);
+  background: rgba(0, 3, 36, 0.8);
+  color: #e5feff;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+  font-size: clamp(28px, 4vw, 50px);
+  line-height: clamp(36px, 5vw, 62px);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.hero-subtext {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: clamp(18px, 2vw, 22px);
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+
+.honor-image {
+  max-height: 175px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 991.98px) {
+  .honor-image {
+    max-height: 120px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .honor-image {
+    max-height: 100px;
+  }
+}
+
+.pet-image {
+  width: 100%;
+  max-height: 416px;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .pet-image {
+    max-height: 550px;
+  }
+}
+
+.intro-text h2 {
+  font-family: 'Dosis', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.rooms-section {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: url('/assets/bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.rooms-title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font: normal normal normal 35px/44px "Dosis", sans-serif;
+  color: #FFFFFF;
+  opacity: 1;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.card-row {
+  width: 100%;
+  max-width: 1142px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  margin-top: 74px;
+  margin-bottom: 74px;
+  padding: 0 10px;
+}
+
+.room-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 369px;
+  max-width: 369px;
+  height: auto;
+  background: #fff;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.room-card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.room-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px;
+}
+
+.room-card .card-title {
+  font-family: "Dosis", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.room-card .card-text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.room-card ul {
+  padding-left: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.9rem;
+}
+
+.room-card .btn-primary-custom {
+  align-self: flex-start;
+  margin-top: auto;
+  margin-bottom: 20px;
+  background: #004CC7;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  height: auto;
+  width: auto;
+  font: bold 20px "Source Sans Pro", sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .room-card {
+    flex: 1 1 300px;
+    max-width: 300px;
+  }
+  .room-card img {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .room-card {
+    flex: 1 1 240px;
+    max-width: 240px;
+  }
+  .room-card img {
+    max-height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .room-card {
+    flex: 0 1 auto;
+    max-width: 90%;
+  }
+  .room-card img {
+    max-height: 180px;
+  }
+}
+
+
+.offers-section {
+  margin-top: 124px;
+  margin-bottom: 95px;
+}
+
+.offers-section .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.offer-image {
+  width: 561px;
+  height: 234px;
+  object-fit: cover;
+}
+
+.offer-title {
+  width: 294px;
+  height: 32px;
+  text-align: left;
+  font: normal normal normal 25px/32px "Dosis", sans-serif;
+  color: #1A1B26;
+  white-space: nowrap;
+}
+
+.offers-section h6 {
+  font: normal normal normal 16px/20px "Source Sans Pro", sans-serif;
+  color: #1F51A8;
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+}
+
+.offers-section p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #1A1B26;
+}
+
+@media (max-width: 992px) {
+  .offers-section .row {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .offers-section .col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  .offers-section .row .col:nth-child(2) img.offer-image {
+    order: -1;
+  }
+
+  .offer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .offer-title, .offers-section h6, .offers-section p {
+    text-align: center !important;
+  }
+}
+
+
+.services-section {
+  position: relative;
+  width: 100%;
+  min-height: 548px;
+  overflow: hidden;
+}
+
+.services-bg {
+  background-image: url('/assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.services-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.services-title {
+  font: normal normal bold 35px/44px "Dosis", sans-serif;
+}
+
+.services-description {
+  font: normal normal normal 16px/20px "Source Sans Pro", sans-serif;
+}
+
+.services-icons img {
+  width: 80px;
+  height: 80px;
+}
+
+.services-icons h6 {
+  font: normal normal normal 16px/20px "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .services-section {
+    min-height: auto;
+  }
+
+  .services-content {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  .services-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .services-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .services-icons img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 101px;
+}
+
+.booking-container {
+  width: 1137px;
+  height: 207px;
+  background: #000324;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 96px;
+  padding-top: 23.5px;
+  color: #fff;
+}
+
+.booking-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  width: 177px;
+  text-align: left;
+  font: normal normal normal 16px/20px "Source Sans Pro", sans-serif;
+  color: #E5FEFF;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 177px;
+  height: 38px;
+  border: none;
+  padding: 15px;
+  font: normal normal normal 16px/20px "Source Sans Pro", sans-serif;
+  color: #1A1B26;
+  border-radius: 0;
+}
+
+.btn-primary-custom {
+  position: relative;
+  top: 24px;
+  width: 177px;
+  height: 38px;
+  background: #004CC7;
+  font: normal normal bold 20px/25px "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  word-wrap: nowrap;
+}
+
+.booking-image {
+  width: 100%;
+  max-width: 1137px;
+  height: auto;
+  display: block;
+  margin-bottom: 101px;
+}
+
+@media (max-width: 991.98px) {
+  .booking-section {
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+
+  .booking-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group .form-control {
+    width: 100%;
+  }
+
+  .btn-primary-custom {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .booking-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #000324;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px 40px;
+  color: #e5feff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.footer-brand {
+  height: 100px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+.footer-info {
+  margin: 0;
+}
+
+.dosis {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/*--Didn't use it at all---*/
+.dosis-bold {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
